@@ -22,17 +22,16 @@
             <button id='WaxLogin'>Login</button>
         </div>
 
-        <div class="div donating-buttons" style="display: none;">
-            <select id="select-token" multiple>
-                <option value="WAX">WAX</option>
-                <option value="MARTIA">MARTIA</option>
-            </select>
+        <div class="select-token-div donating-buttons" style="display: none;">
+            <input class="select-token" id="wax-button" type="button" value="WAX" onclick="changeClass(this.id); amount_check();" /> 
+            <input class="select-token" id="martia-button" type="button" value="MARTIA" onclick="changeClass(this.id); amount_check();"/> 
         </div>
         <div class="div donating-buttons" style="display: none;">
-            <div class="div"><input class="textbox" id="Amount" placeholder="Amount" value="" type="number" min="0" onchange="amount_check()"></div>
-            
-            <div class="div"><button id="Donate-Button">Donate!</button></div>
+            <input class="textbox" id="Amount" placeholder="Amount" value="" type="number" min="0" onchange="amount_check()">
+        </div>
 
+        <div class="div donating-buttons" style="display: none;">
+            <button id="Donate-Button">Donate!</button>
         </div>
         
     </body>
