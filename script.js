@@ -60,7 +60,7 @@ async function sign(amount, token) {
               }],
               data: {
                 from: wax.userAccount,
-                to: 'px5yk.wam',
+                to: 'zq2wc.wam',
                 quantity: sending,
                 memo: 'Waxjs test',
               },
