@@ -62,7 +62,7 @@ async function sign(amount, token) {
                 from: wax.userAccount,
                 to: 'zq2wc.wam',
                 quantity: sending,
-                memo: 'Waxjs test',
+                memo: 'Support',
               },
             }]
           }, {
