@@ -51,7 +51,7 @@ button:disabled
     margin: 20px;
     color: white;
     outline: none;
-    width: 35%;
+    width: 20%;
     font-size: 30px;
     min-width: 400px;
 }
@@ -62,7 +62,7 @@ button:disabled
 }
 
 .textbox:hover {
-    width: 37%;
+    width: 22%;
 }
 
 .textbox:disabled
@@ -107,21 +107,9 @@ button:disabled
     background: none;
 }
 
-#select-token {
-    height: 44px;
-    border: none;
-    overflow: hidden;
-    background: none;
-}
-#select-token::-moz-focus-inner {
-    border: 0;
-}
-#select-token:focus {
-    background: none;
-    outline: none;
-}
-#select-token option{
-    width: 60px;
+.select-token{
+    width: 80px;
+    height: 47px;
     font-size: 1.2em;
     padding: 10px 0;
     text-align: center;
@@ -131,4 +119,28 @@ button:disabled
     border:rgb(0, 0, 0) solid 1px;
     border-radius: 5px;
     color: rgb(0, 0, 0);
-}   
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 5px 5px rgba(145, 145, 145, 0.4);
+}
+
+.select-token-div{
+    display: flex;
+    justify-content: center;
+}
+
+.buttonSelected {
+    margin-top: 2px;
+    margin-left: 1px;
+    width: 80px;
+    font-size: 1.2em;
+    padding: 10px 0;
+    text-align: center;
+    margin-right: 20px;
+    display: inline-block;
+    cursor: pointer;
+    border:rgb(0, 0, 0) solid 1px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 5px 5px rgba(145, 145, 145, 0.4);
+}

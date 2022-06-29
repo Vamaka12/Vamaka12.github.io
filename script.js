@@ -4,7 +4,7 @@ jQuery('document').ready(function () {
     })
 
     jQuery("#Donate-Button").on('click', function () {
-        sign(jQuery('#Amount').val(), jQuery('#select-token').val());
+        sign(jQuery('#Amount').val(), jQuery('.buttonSelected').val());
     })
 })
         
@@ -36,14 +36,23 @@ async function login() {
 }
 
 async function sign(amount, token) {
+
     var a = amount.split(".")[1]
-    
+    var h = ""
+
+    if (token == "WAX")
+    {
+        h = "eosio.token"
+    }
+    if (token == "MARTIA")
+    {
+        h = "martia"
+    }
     var sending = amount +  ' ' + token;
-    console.log("'" + sending + "'")
     try {
         const result = await wax.api.transact({
             actions: [{
-              account: 'eosio.token',
+              account: h,
               name: 'transfer',
               authorization: [{
                 actor: wax.userAccount,
@@ -67,12 +76,18 @@ async function sign(amount, token) {
 
 function amount_check()
 {
-    if (jQuery('#select-token').val() == "WAX")
+    
+
+    if (jQuery('.buttonSelected').val() == "WAX")
     {
         let a = jQuery('#Amount').val().split(".")[1];
         if (a == undefined)
         {
             jQuery('#Amount').val(jQuery('#Amount').val() + ".00000000");
+        }
+        if (jQuery('#Amount').val().split(".")[0] == "")
+        {
+            jQuery('#Amount').val("1." + jQuery('#Amount').val().split(".")[1])
         }
         else {
             if (a.length < 8)
@@ -91,14 +106,17 @@ function amount_check()
                 jQuery('#Amount').val(jQuery('#Amount').val().split(".")[0] + "." + b)
             }
         }
-        console.log(a.length)
     }
-    if (jQuery('#select-token').val() == "MARTIA") // 0.0100 MARTIA
+    if (jQuery('.buttonSelected').val() == "MARTIA")
     {
         let a = jQuery('#Amount').val().split(".")[1];
         if (a == undefined)
         {
             jQuery('#Amount').val(jQuery('#Amount').val() + ".0000");
+        }
+        if (jQuery('#Amount').val().split(".")[0] == "")
+        {
+            jQuery('#Amount').val("1." + jQuery('#Amount').val().split(".")[1])
         }
         else {
             if (a.length < 4)
@@ -117,7 +135,19 @@ function amount_check()
                 jQuery('#Amount').val(jQuery('#Amount').val().split(".")[0] + "." + b)
             }
         }
-        console.log(a.length) 
     } 
 }
 
+function changeClass(id)
+{
+    if (id == "wax-button")
+    {
+        $('#martia-button').removeClass('buttonSelected');
+        $('#wax-button').addClass('buttonSelected');
+    }
+    else
+    {
+        $('#wax-button').removeClass('buttonSelected');
+        $('#martia-button').addClass('buttonSelected');
+    }
+}
