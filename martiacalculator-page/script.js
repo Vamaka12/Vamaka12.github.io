@@ -13,7 +13,7 @@ jQuery('document').ready(function () {
     });
 
     xhr.open("GET", "https://api.mars.cards/api/strength/martia-release-power");
-    xhr.setRequestHeader("authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzeW1ib2wiOiJmNDcwNjIxNi05OGYwLTQzZGUtOTI3MC1jN2RkYzIzYzk2YjAiLCJ1c2VybmFtZSI6InZhbWFrYTEyIiwiaWF0IjoxNjU2NTY1OTcyLCJleHAiOjE2NTY1ODM5NzJ9.4LGtulrmBJ2KYZPbetFv-YXFiRmMPJjWt5edjjcmurw");
+    xhr.setRequestHeader("authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzeW1ib2wiOiJmNDcwNjIxNi05OGYwLTQzZGUtOTI3MC1jN2RkYzIzYzk2YjAiLCJ1c2VybmFtZSI6InZhbWFrYTEyIiwiaWF0IjoxNjU2NTk0NDg0LCJleHAiOjE2NTY2MTI0ODR9.DEBn5OzKGuNzrPYTWV1ztRddUjmw-B2KBjkl7tnB180");
 
     xhr.send();
 
