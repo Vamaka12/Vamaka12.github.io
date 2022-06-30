@@ -1,7 +1,7 @@
 jQuery('document').ready(function () {
 
     var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
+    xhr.withCredentials = false;
 
     xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
@@ -11,7 +11,7 @@ jQuery('document').ready(function () {
     });
 
     xhr.open("GET", "https://api.mars.cards/api/strength/martia-release-power");
-    xhr.setRequestHeader("authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzeW1ib2wiOiJmNDcwNjIxNi05OGYwLTQzZGUtOTI3MC1jN2RkYzIzYzk2YjAiLCJ1c2VybmFtZSI6InZhbWFrYTEyIiwiaWF0IjoxNjU2NTY1OTcyLCJleHAiOjE2NTY1ODM5NzJ9.4LGtulrmBJ2KYZPbetFv-YXFiRmMPJjWt5edjjcmurw");
+    xhr.setRequestHeader("authorization", "");
 
     xhr.send();
 
