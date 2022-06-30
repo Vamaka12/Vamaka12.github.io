@@ -149,3 +149,8 @@ button:disabled
     color: rgb(188, 129, 255);
     transform: scale(1.2);
 }
+
+#label {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}

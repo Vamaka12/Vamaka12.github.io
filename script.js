@@ -6,9 +6,10 @@ jQuery('document').ready(function () {
     jQuery("#Donate-Button").on('click', function () {
         sign(jQuery('#Amount').val(), jQuery('.buttonSelected').val());
     })
+    jQuery('#martiacalculator-menu-button').on('click', function (){
+        document.location.href = 'martiacalculator-page/index.html';
+    })
 })
-        
-
 
 
 const wax = new waxjs.WaxJS({

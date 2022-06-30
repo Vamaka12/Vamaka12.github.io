@@ -13,7 +13,8 @@
 
     <body>
         <div class="div" id="menu-div">
-            <button class="menu-option">Donate</button>
+            <button class="menu-option" id="current-menu">Donate</button>
+            <button class="menu-option" id="martiacalculator-menu-button">Martia Calculator</button>
         </div>
         <div class="div">
             <label id="Title">Donate</label>
@@ -27,7 +28,7 @@
             <input class="select-token" id="martia-button" type="button" value="MARTIA" onclick="changeClass(this.id); amount_check();"/> 
         </div>
         <div class="div donating-buttons" style="display: none;">
-            <input class="textbox" id="Amount" placeholder="Amount" value="" type="number" min="0" onchange="amount_check()">
+            <input class="textbox" id="Amount" placeholder="Amount" inputMode="numeric" value="" type="number" min="0" onchange="amount_check()"> 
         </div>
 
         <div class="div donating-buttons" style="display: none;">
